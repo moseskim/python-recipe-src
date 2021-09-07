@@ -1,14 +1,14 @@
-# 기술평론하의 신간 정보의 URL 또는 html 구조가 달라지는 경우, 다음 코드는 정상 동작하지 않습니다.
-# 그 때는 변수 html 데이터를 디렉터리에 포함된 gihyo.html로 바꾸기 바랍니다.
+# 제이펍 도서 정보의 URL 또는 html 구조가 달라지는 경우 이 코드는 정상 동작하지 않습니다.
+# 그때는 변수 html 데이터를 디렉터리에 포함된 jpub.html로 바꾸기 바랍니다.
 # 다음은 html 데이터 치환의 예입니다.
-# with open("gihyo.html", "r") as f:
+# with open("jpub.html", "r", encoding="utf-8") as f:
 #     html = f.read()
 
 import requests
 from bs4 import BeautifulSoup
 
-# 신간 URL
-url = "https://gihyo.jp/book/list"
+# 도서 정보 URL
+url = "https://jpub.tistory.com/category/%EB%8F%84%EC%84%9C%20%EC%86%8C%EA%B0%9C"
 
 # HTTP GET 요청
 r = requests.get(url)
@@ -19,13 +19,11 @@ html = r.text
 # html 파싱
 soup = BeautifulSoup(html, "html5lib")
 
-# ul 태그 얻기
-ul = soup.find("ul", class_="magazineList01 bookList01")
+# post-item 태그 얻기
+post_items = soup.find_all(name="div", class_="post-item")
 
-# ul 태그 아래의 li 태그를 시퀀스로 얻기
-lis = ul.find_all("li")
-
-# li 태그별로 서정 정보 얻기
-for li in lis:
-    link = li.find("h3").find("a")
-    print(link.text, link.get("href"))
+# post-item 태그별로 서정 정보 얻기
+for post_item in post_items:
+    link_text = post_item.find(class_="title").getText()
+    link = post_item.find("a")
+    print(link_text, link.get("href"))
