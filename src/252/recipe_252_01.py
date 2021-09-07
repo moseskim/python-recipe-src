@@ -4,8 +4,7 @@
 
 from PIL import Image
 
-image_org = Image.open("pillow_sample.jpg")
-image = image_org.rotate(180)
+image = Image.open("pillow_sample.jpg")
 logo = Image.open("python-logo.png")
 image.paste(logo, (100, 100))
 image.save("pillow_paste.jpg")
