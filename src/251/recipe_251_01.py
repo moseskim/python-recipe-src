@@ -1,4 +1,4 @@
-# 실행할 떄는 img 디렉터리 아래의 pillow_sample.jog를 스크립트와 같은 디렉터리에 배치한 뒤 실행합니다.
+# 실행할 떄는 img 디렉터리 아래의 pillow_sample.jpg를 스크립트와 같은 디렉터리에 배치한 뒤 실행합니다.
 # 폰트 경로는 사용하는 환경에 맞게 변경합니다.
 
 from PIL import Image, ImageFont, ImageDraw
