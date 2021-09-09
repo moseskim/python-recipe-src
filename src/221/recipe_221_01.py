@@ -1,5 +1,3 @@
-import tarfile
+import shutil
 
-with tarfile.open("sample.tar.gz", "w:gz") as tar:
-    tar.add("tmp1.txt")
-    tar.add("tmp2.txt")
+shutil.make_archive('dir_sample', 'zip', root_dir='data_dir')

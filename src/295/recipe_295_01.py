@@ -1,8 +1,8 @@
 import matplotlib.pyplot as plt
+import numpy as np
 
-# 데상 데이터
-label = ["A", "B", "C", "D", "E"]
-x = [40, 30, 15, 10, 5]
+# 대상 데이터
+x = np.random.normal(0, 10, 1000)
 
 # figure 생성
 fig = plt.figure()
@@ -11,10 +11,7 @@ fig = plt.figure()
 ax = fig.add_subplot(1, 1, 1)
 
 # axes에 플롯
-ax.pie(x, labels=label, counterclock=False, startangle=90)
-
-# 표시 보정
-ax.axis('equal')
+ax.hist(x, bins=10, color="#00AAFF", ec="#0000FF", alpha=0.5)
 
 # 표시
 plt.show()

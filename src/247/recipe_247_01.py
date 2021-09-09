@@ -3,6 +3,7 @@
 from PIL import Image
 
 image = Image.open("pillow_sample.jpg")
-rect = (400, 500, 525, 625)
-new_image = image.crop(rect)
-new_image.save("pillow_crop.jpg")
+new_image1 = image.rotate(45)
+new_image1.save("pillow_rotate1.jpg")
+new_image2 = image.rotate(45, expand=True)
+new_image2.save("pillow_rotate2.jpg")

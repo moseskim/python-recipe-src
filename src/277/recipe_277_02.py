@@ -1,10 +1,7 @@
 import pandas as pd
 
+name = ["Garam", "Nagil", "Dabin", "Maru", "Bada"]
 data = {'height': [161, 168, 173, 169, 188], 'weight': [55, 63, 78, 59, 68]}
-df = pd.DataFrame(data)
+df = pd.DataFrame(data, index=name)
 
-# 평균값 산출
-m = df.mean()
-
-ds = df.describe()
-print(ds)
+print(df.weight.Garam)

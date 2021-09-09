@@ -1,4 +1,4 @@
 import zipfile
 
-with zipfile.ZipFile('sample.zip', 'r')as zf:
-    zf.extract('tmp.txt', r'.\output')
+with zipfile.ZipFile('sample.zip', 'a')as zf:
+    zf.write('tmp4.txt')

@@ -1,7 +1,9 @@
 import pandas as pd
-import numpy as np
 
-data = {'name': ['Apple', 'Orange', 'Banana'], 'stock': [15, None, 20]}
+data = {'A': [1, 2, 3, 4], 'B': [10, 20, 30, 40]}
 df = pd.DataFrame(data)
-df2 = df.replace(np.NaN, 0)
-print(df2)
+
+condition = [True, False, True, False]
+
+new_condition = (df.index % 2 == 0)
+print(new_condition)
