@@ -1,9 +1,8 @@
 import pyautogui
+pyautogui.FAILSAFE = True
 
-# 마우스 포인터 위치
-mouse_pos = pyautogui.position()
-print(mouse_pos.x, mouse_pos.y)
+# (100, 100)으로 이동
+pyautogui.moveTo(100, 100)
 
-# 화면 크기
-disp_size = pyautogui.size()
-print(disp_size.height, disp_size.width)
+# 천천히 (150, 150) 만큼 이동
+pyautogui.moveRel(150, 150, duration=5)

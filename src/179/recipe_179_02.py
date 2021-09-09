@@ -1,4 +1,3 @@
-l1 = ["사과", "귤", "바나나"]
-l2 = ["딸기", "오렌지", "파인애플"]
-l1.extend(l2)
-print(l1)
+l1 = ['d', 'b', 'c', 'a']
+l2 = sorted(l1, reverse=True)
+print(l2)

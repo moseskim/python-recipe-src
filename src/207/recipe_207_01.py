@@ -1,6 +1,6 @@
-import json
+import base64
 
-data_dict = {'colors': ['red', 'green', 'blue'], 'items': [123, 456, 789],
-             'users': [{'name': '제이펍', 'id': 1}, {'name': '출판사', 'id': 5}]}
-json_str = json.dumps(data_dict, indent=2, ensure_ascii=False)
-print(json_str)
+with open("python-powered-h-50x65.png", 'br') as f:
+    bin_img = f.read()
+    b64_img = base64.b64encode(bin_img).decode()
+    print(b64_img)

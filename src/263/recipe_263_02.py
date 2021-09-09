@@ -1,4 +1,7 @@
 import numpy as np
 
-zero = np.zeros((2, 3))
-print(zero)
+a = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+b = np.array([[1, 2, 3], [1, 2, 3], [1, 2, 3]])
+
+x = np.dot(a, b)
+print(x)

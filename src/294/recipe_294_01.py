@@ -1,20 +1,20 @@
 import matplotlib.pyplot as plt
-import numpy as np
 
-# 대상 데이터
-x = np.linspace(0, 5, 100)  # x축의 값
-y1 = x ** 2
-y2 = np.sin(x)
+# 데상 데이터
+label = ["A", "B", "C", "D", "E"]
+x = [40, 30, 15, 10, 5]
 
 # figure 생성
 fig = plt.figure()
 
-# ax를 figure에 설정
+# ax를 figure로 설정
 ax = fig.add_subplot(1, 1, 1)
 
 # axes에 플롯
-ax.plot(x, y1, "-")
-ax.plot(x, y2, "-")
+ax.pie(x, labels=label, counterclock=False, startangle=90)
+
+# 표시 보정
+ax.axis('equal')
 
 # 표시
 plt.show()

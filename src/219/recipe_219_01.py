@@ -1,6 +1,4 @@
-import zipfile
+import tarfile
 
-with zipfile.ZipFile('sample.zip', 'w')as zf:
-    zf.write('tmp1.txt')
-    zf.write('tmp2.txt')
-    zf.write('tmp3.txt')
+with tarfile.open('sample.tar.gz', 'r') as tar:
+    tar.extractall(r'.\output')

@@ -1,8 +1,6 @@
-from datetime import datetime
+from datetime import date
 
-# 현재 시각 얻기
-dt = datetime.now()
-
-# datetime 타입에서 문자열로 변환
-datetime_str = dt.strftime("%Y-%m-%d %H:%M:%S")
-print(datetime_str)
+d = date(2021, 10, 12)
+print(d.year)
+print(d.month)
+print(d.day)

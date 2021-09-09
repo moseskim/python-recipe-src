@@ -1,6 +1,5 @@
-import uuid
+from urllib import parse
 
-u1 = uuid.uuid1()
-print(u1)
-u4 = uuid.uuid4()
-print(u4)
+text = "제이펍"
+url_encoded = parse.quote(text)
+print(url_encoded)
