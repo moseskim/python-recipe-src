@@ -12,8 +12,8 @@ with sqlite3.connect(':memory:') as conn:
     # 샘플 데이터 삽입
     cur.execute('insert into body  values (1, 165, 56)')
     cur.execute('insert into body  values (2, 176, 67)')
-    cur.execute('insert into body  values (3, 167, 59)')
-    cur.execute('insert into body  values (4, 170, 65)')
+    cur.execute('insert into body  values (3, 168, 59)')
+    cur.execute('insert into body  values (4, 171, 65)')
     
     # SELECT문으로 DataFrame 작성
     df = psql.read_sql("SELECT id, height, weight FROM body;", conn, index_col="id")
