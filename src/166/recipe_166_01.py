@@ -1,7 +1,3 @@
-import mojimoji
-
-text = "ｐｙｔｈｏｎ パイソン １０００"
-print(mojimoji.zen_to_han(text))
-print(mojimoji.zen_to_han(text, kana=False))
-print(mojimoji.zen_to_han(text, digit=False))
-print(mojimoji.zen_to_han(text, ascii=False))
+b = bytes([0xEA, 0xB0, 0x80])  # EAB080
+s = b.decode(encoding='utf-8')
+print(s)

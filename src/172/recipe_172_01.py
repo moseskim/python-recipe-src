@@ -1,5 +1,5 @@
 import re
 
-text = "Beautiful is better than ugly."
-replaced = re.sub(r"\s", "_", text)
-print(replaced)
+text = "Special cases aren't special enough to break the rules."
+splited = re.split(r"[^a-zA-Z0-9]+", text)
+print(splited)
