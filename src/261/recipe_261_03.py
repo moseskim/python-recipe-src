@@ -1,4 +1,6 @@
 import numpy as np
 
-x = np.array([[11, 12, 13], [21, 22, 23], [31, 32, 33]])
-print(x[0:2, 0:2])
+e1 = np.array([1, 0, 0])
+e2 = np.array([0, 1, 0])
+e3 = np.cross(e1, e2)
+print(e3)

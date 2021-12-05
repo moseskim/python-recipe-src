@@ -1,9 +1,21 @@
 import numpy as np
 
-# 기저 벡터 (1, 1, 0)、(0, -1, 0)
-a = np.array([[1, 1], [1, -1], [0, 0]])
+a = np.array([[1, 3], [2, -1]])
 
-# QR 분해
-q, r = np.linalg.qr(a)
-print(q)
-print(r)
+# 행렬 표시
+print(a)
+
+# 전치 행렬
+print(a.T)
+
+# 트레이스
+print(a.trace())
+
+# 역행렬
+print(np.linalg.inv(a))
+
+# 행렬식
+print(np.linalg.det(a))
+
+# 순위
+print(np.linalg.matrix_rank(a))

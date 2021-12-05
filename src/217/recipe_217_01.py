@@ -1,4 +1,5 @@
-import zipfile
+import hashlib
 
-with zipfile.ZipFile('sample.zip', 'r')as zf:
-    zf.extractall(r'.\output')
+key = "abcdefg"
+sha256 = hashlib.sha256(key.encode()).hexdigest()
+print(sha256)

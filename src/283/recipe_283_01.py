@@ -1,7 +1,6 @@
 import pandas as pd
 
-data = {'A': [1, 2, 3, 4], 'B': [10, 20, 30, 40]}
+data = {'name': ['Apple', 'Oranggg', 'Banana'], 'price': [110, 120, 130]}
 df = pd.DataFrame(data)
-
-condition = [True, False, True, False]
-print(df[condition])
+df2 = df.replace('Oranggg', 'Orange')
+print(df2)

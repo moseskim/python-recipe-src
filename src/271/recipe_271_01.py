@@ -1,5 +1,4 @@
 import pandas as pd
 
-s = pd.Series([1, 2, 3, 4], index=['a', 'b', 'c', 'd'])
-print(s["a"])
-print(s.b)
+s = pd.Series([10, 20, 30], index=["a", "b", "c"])
+print(s)

@@ -1,5 +1,3 @@
-import chardet
-
-with open("tmp.txt", mode='rb') as f:
-    result = chardet.detect(f.read())
-    print(result)
+b = bytes([0xEA, 0xB0, 0x80])  # EAB080
+s = b.decode(encoding='utf-8')
+print(s)

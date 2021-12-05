@@ -3,5 +3,6 @@
 from PIL import Image
 
 image = Image.open('pillow_sample.jpg')
-new_image = image.resize((400, 200))
-new_image.save('pillow_resize1.jpg')
+image2 = image.transpose(Image.FLIP_TOP_BOTTOM)
+image2.show()
+image2.save('new_sample.jpg')

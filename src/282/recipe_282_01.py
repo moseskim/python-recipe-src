@@ -1,6 +1,6 @@
 import pandas as pd
 
-data = {'name': ['Apple', 'Oranggg', 'Banana'], 'price': [110, 120, 130]}
+data = {'height': [161, None, 173, 169, 188], 'weight': [55, 63, 78, 59, 68]}
 df = pd.DataFrame(data)
-df2 = df.replace('Oranggg', 'Orange')
-print(df2)
+print(pd.isnull(df.height).any())
+print(pd.isnull(df.weight).any())

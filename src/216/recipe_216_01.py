@@ -1,5 +1,5 @@
-import hashlib
+import codecs
 
-key = "abcdefg"
-sha256 = hashlib.sha256(key.encode()).hexdigest()
-print(sha256)
+u_text = "\uc81c\uc774\ud38d"
+text = codecs.decode(u_text.encode())
+print(text)
