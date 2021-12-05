@@ -1,5 +1,5 @@
 import re
 
-text = "Beautiful is better than ugly."
-replaced = re.sub(r"\s", "_", text)
-print(replaced)
+text = "In the face of ambiguity, refuse the temptation to guess."
+match_list = re.findall(r"t.", text)
+print(match_list)

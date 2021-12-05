@@ -1,5 +1,6 @@
-from datetime import time, datetime
+from datetime import time
 
-t = datetime.strptime("12:15:05", "%H:%M:%S").time()
-time_str = t.strftime("%H.%M.%S")
-print(time_str)
+t = time(12, 15, 5)
+print(t.hour)
+print(t.minute)
+print(t.second)

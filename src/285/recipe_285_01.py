@@ -6,5 +6,6 @@ weight = [55, 63, 78, 59, 68, 59]
 data = {'grade': grade, 'height': height, 'weight': weight}
 df = pd.DataFrame(data)
 
-df2 = df.sort_values(['grade', 'weight', 'height'], ascending=[True, False, False])
-print(df2)
+# 학년별 키, 몸무게의 평균
+m = df.groupby("grade").mean()
+print(m)

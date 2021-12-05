@@ -1,6 +1,18 @@
-from datetime import time
+from datetime import datetime, date, time, timedelta
 
-t = time(12, 15, 5)
-print(t.hour)
-print(t.minute)
-print(t.second)
+# 2021/12/22의 date 타입 생성
+d1 = date(2021, 12, 22)
+
+# 2021/12/22 12:00:30의 datetime 타입 생성
+dt1 = datetime(2021, 12, 22, 12, 00, 30)
+
+# 100일 만큼의 timedelta 타입 생성
+delta = timedelta(days=100)
+
+# 100일 후의 날짜 및 시간 계산
+d2 = d1 + delta
+dt2 = dt1 + delta
+
+# 계산 결과 출략
+print(d2)
+print(dt2)

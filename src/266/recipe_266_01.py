@@ -1,10 +1,9 @@
 import numpy as np
 
-a = np.array([[2, 1, 1], [1, 2, 1], [1, 1, 2]])
-w, v = np.linalg.eig(a)
+# 기저 벡터 (1, 1, 0)、(0, -1, 0)
+a = np.array([[1, 1], [1, -1], [0, 0]])
 
-# 고유값
-print(w)
-
-# 고유 벡터
-print(v)
+# QR 분해
+q, r = np.linalg.qr(a)
+print(q)
+print(r)

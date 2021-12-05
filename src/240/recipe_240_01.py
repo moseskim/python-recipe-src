@@ -1,8 +1,8 @@
 from bs4 import BeautifulSoup
 
-html = '<html><body><div id="content"><h1>chapter 1</h1><p class="para1">paragraph1</p> <p class="para2">paragraph2</p><div></body></html>'
+html = '<html><body><div id="content"><a class="inf-link" href="/support/inquiry-form">문의하기</a><div></body></html>'
 soup = BeautifulSoup(html, "html5lib")
 
-ptags = soup.find_all("p")
-for p in ptags:
-    print(p)
+a = soup.find("a")
+print(a.text)
+print(a.get("href"))

@@ -1,5 +1,5 @@
-import random
+import chardet
 
-letters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'
-rl = random.choices(letters, k=5)
-print(rl)
+with open("tmp.txt", mode='rb') as f:
+    result = chardet.detect(f.read())
+    print(result)

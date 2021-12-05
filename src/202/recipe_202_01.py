@@ -1,6 +1,4 @@
 import calendar
-from datetime import datetime
 
-now_dt = datetime.now()
-result = calendar.isleap(now_dt.year)
-print(result)
+start_wd, end_day = calendar.monthrange(2020, 2)
+print(start_wd, end_day)

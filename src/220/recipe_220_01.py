@@ -1,5 +1,4 @@
 import tarfile
 
-with tarfile.open("sample.tar.gz", "w:gz") as tar:
-    tar.add("tmp1.txt")
-    tar.add("tmp2.txt")
+with tarfile.open('sample.tar.gz', 'r') as tar:
+    tar.extractall(r'.\output')

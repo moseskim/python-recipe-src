@@ -1,3 +1,5 @@
-d = {'key1': 100, 'key2': 200, 'key3': 300}
-swapped_dict = {value: key for key, value in d.items()}
-print(swapped_dict)
+keys = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+values = ['월요일', '화요일', '수요일', '목요일', '금요일', '토요일', '일요일']
+
+week_days = dict(zip(keys, values))
+print(week_days)

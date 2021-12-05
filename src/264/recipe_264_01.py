@@ -1,21 +1,7 @@
 import numpy as np
 
-a = np.array([[1, 3], [2, -1]])
+a = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+b = np.array([[10, 20, 30], [40, 50, 60], [70, 80, 90]])
 
-# 행렬 표시
-print(a)
-
-# 전치 행렬
-print(a.T)
-
-# 트레이스
-print(a.trace())
-
-# 역행렬
-print(np.linalg.inv(a))
-
-# 행렬식
-print(np.linalg.det(a))
-
-# 순위
-print(np.linalg.matrix_rank(a))
+print(a + b)
+print(a - b)

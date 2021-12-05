@@ -1,7 +1,6 @@
-import csv
+import calendar
+from datetime import datetime
 
-sample_list = [["col1", "col2", "col3"], [101, 102, 103], [201, 202, 203], [301, 302, 303]]
-with open('sample2.csv', 'w', newline='') as f:
-    writer = csv.writer(f, lineterminator='\n')
-    for row in sample_list:
-        writer.writerow(row)
+now_dt = datetime.now()
+result = calendar.isleap(now_dt.year)
+print(result)
