@@ -13,6 +13,6 @@ delta = timedelta(days=100)
 d2 = d1 + delta
 dt2 = dt1 + delta
 
-# 계산 결과 출략
+# 계산 결과 출력
 print(d2)
 print(dt2)
