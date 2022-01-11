@@ -1,9 +1,11 @@
-from matplotlib import pyplot as plt
-import numpy as np
+import matplotlib.pyplot as plt
 
-# 무작위로 점을 생성
-x = np.random.rand(50)
-y = np.random.rand(50)
+# 레이블
+label = ['A', 'B', 'C', 'D', 'E']
+
+# 대상 데이터
+x = [1, 2, 3, 4, 5] # 가로축
+height = [3, 5, 1, 2, 3] # 값
 
 # figure 생성
 fig = plt.figure()
@@ -11,6 +13,8 @@ fig = plt.figure()
 # ax를 figure에 설정
 ax = fig.add_subplot(1, 1, 1)
 
-# 플롯 마커 크기, 색상, 투명도 설정
-ax.scatter(x, y, s=300, alpha=0.5, linewidths=2, marker='*', c='#aaaaFF', edgecolors='blue')
+# axes에 막대그래프 설정
+ax.bar(x, height, label=label, linewidth=1, edgecolor="#000000")
+
+# 표시
 plt.show()

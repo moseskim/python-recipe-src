@@ -1,6 +1,6 @@
-import calendar
-from datetime import datetime
+import csv
 
-now_dt = datetime.now()
-result = calendar.isleap(now_dt.year)
-print(result)
+with open('sample.csv', newline='') as f:
+    reader = csv.reader(f)
+    for row in reader:
+        print(row)
