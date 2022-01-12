@@ -3,5 +3,5 @@ def calc_billing_amount(unit_prices, units, fees, tax_rate):
     return (unit_prices * units + fees) * tax_rate
 
 
-x = calc_billing_amount(unit_prices=100, units=10, fees=50, tax_rate=1.1)
+x = calc_billing_amount(unit_prices=1000, units=10, fees=500, tax_rate=1.1)
 print(x)
