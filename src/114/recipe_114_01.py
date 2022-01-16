@@ -1,5 +1,5 @@
 # 다음 명령어로 실행합니다
-# python -m unittest test_recipe_114_01.py 
+# python -m unittest recipe_114_01.py 
 
 import unittest
 
