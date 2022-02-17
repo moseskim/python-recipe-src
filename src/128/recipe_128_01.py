@@ -1,3 +1,3 @@
 import os
 
-print(os.listdir(r"C:\Windows"))
+print(os.listdir(r"C:\work"))
