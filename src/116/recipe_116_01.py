@@ -2,7 +2,7 @@ import configparser
 
 # config 파일 로딩
 config = configparser.ConfigParser()
-config.read('config.ini')
+config.read('config.ini', encoding='utf-8')
 
 # 값을 문자열로 얻는다
 config['SAMPLE1']['str_key']
