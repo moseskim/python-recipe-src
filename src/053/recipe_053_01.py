@@ -32,4 +32,4 @@ x6 = {"key": 0}
 if x6:
     print('{}은(는) 참으로 판정했습니다'.format(x6))
 else:
-    print('{{}은(는) 거짓으로 판정했습니다'.format(x6))
+    print('{}은(는) 거짓으로 판정했습니다'.format(x6))
