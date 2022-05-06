@@ -22,7 +22,7 @@ soup = BeautifulSoup(html, "html5lib")
 # post-item 태그 얻기
 post_items = soup.find_all(name="div", class_="post-item")
 
-# post-item 태그별로 서정 정보 얻기
+# post-item 태그별로 서적 정보 얻기
 for post_item in post_items:
     link_text = post_item.find(class_="title").getText()
     link = post_item.find("a")
